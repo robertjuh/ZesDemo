@@ -1,24 +1,25 @@
-# Claude Code local settings
-/.claude/settings.local.json
 
-# Symfony / PHP
-/vendor/
-/var/
+###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
 
-# Composer
-composer.phar
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###
 
-# Node
-/node_modules/
-/public/build/
-npm-debug.log
-yarn-error.log
+###> claude code ###
+/.claude/settings.local.json
+###< claude code ###
 
-# IDE
-/.idea/
-/.vscode/
-*.swp
+###> frontend ###
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env.local
+###< frontend ###
